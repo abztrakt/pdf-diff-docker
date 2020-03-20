@@ -8,6 +8,5 @@ sudo docker rm $dockerName
 
 sudo docker run \
      --name $dockerName -t -d \
-     -v $PWD/pdf-diff:/home/build/differ \
      -v $PWD:/mnt \
      $dockerTag
