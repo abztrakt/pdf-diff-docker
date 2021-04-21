@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  cli:
+    build: .
+    volumes:
+      - ./files:/home/build/files
+    # It doesn't like this command, but runs it fine from a bash shell in cli
+    command: pdf-diff /home/build/files/${OLDEST} /home/build/files/${NEWEST} > /home/build/files/${OUTPUT}
