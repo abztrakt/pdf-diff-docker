@@ -16,3 +16,5 @@ USER build
 WORKDIR /home/build
 RUN git clone https://github.com/JoshData/pdf-diff
 RUN cd pdf-diff && sudo python3 setup.py install
+
+CMD pdf-diff /home/build/files/$OLDEST /home/build/files/$NEWEST > /home/build/files/$OUTPUT
