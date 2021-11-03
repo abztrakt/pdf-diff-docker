@@ -2,10 +2,9 @@ FROM ubuntu:bionic
 
 RUN apt-get update -y
 
-RUN apt-get install -y python3-lxml poppler-utils
-RUN apt-get install -y python sudo python3-setuptools
-RUN apt-get install -y ca-certificates gcc g++ python3-dev
-RUN apt-get install -y git
+RUN apt-get install -y python3-lxml poppler-utils python sudo \
+                       python3-setuptools ca-certificates gcc g++ python3-dev \
+                       git zlib1g-dev libjpeg-dev
 
 ARG USER_ID=1000
 RUN useradd --shell /bin/bash -u $USER_ID -o -c "" -m build
