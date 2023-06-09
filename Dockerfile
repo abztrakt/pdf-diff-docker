@@ -1,8 +1,8 @@
-FROM ubuntu:bionic
+FROM ubuntu:jammy
 
 RUN apt-get update -y
 
-RUN apt-get install -y python3-lxml poppler-utils python sudo \
+RUN apt-get install -y python3-lxml poppler-utils python3 sudo \
                        python3-setuptools ca-certificates gcc g++ python3-dev \
                        git zlib1g-dev libjpeg-dev
 
